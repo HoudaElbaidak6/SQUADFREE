@@ -1,0 +1,1039 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary--color: rgb(75, 153, 188);
+  --bg--color: #71afcb;
+}
+@font-face {
+  font-family: Raleway;
+  src: url(../font/Raleway/static/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "sans open";
+  src: url(../font/opensans/static/OpenSans/OpenSans-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* 
+---------------------------------HEADER----------------------------------------
+--------------------------------------------------------------------------------
+*/
+header {
+  background-color: var(--primary--color);
+  padding: 10px;
+  /* overflow: auto;   */
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  font-family: Raleway;
+  padding: 5px 100px;
+}
+
+nav a {
+  color: white;
+  text-transform: capitalize;
+  font-family: Raleway;
+  text-decoration: none;
+  margin: 0px 5px;
+  padding: 10px 10px;
+  border: 3px solid transparent;
+}
+
+nav a:hover {
+  color: rgb(77, 75, 75);
+  border: 3px solid transparent;
+  padding: 10px 10px;
+  background-color: #6fadc9;
+}
+
+h1,
+nav > ul > li {
+  display: inline-block;
+}
+
+nav {
+  float: right;
+  margin-right: 120px;
+}
+/* 
+-----------------------------Drop down List----------------------
+-------------------------------------------------------------------
+*/
+
+.dropdown {
+  position: relative;
+}
+
+.dropdowncontent {
+  position: absolute;
+  display: none;
+  z-index: 100px;
+  min-width: 90%;
+  list-style: none;
+  background-color: var(--primary--color);
+  box-shadow: 0px 8px 16px rgb(160, 160, 160);
+  padding: 10px;
+  left: 20;
+  transition: top 2s;
+}
+
+.dropdowncontent a {
+  color: white;
+  background: transparent;
+}
+
+.dropdowncontent a:hover {
+  color: rgb(77, 75, 75);
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+/* 
+-----------------------------banner----------------------
+-------------------------------------------------------------------
+*/
+
+.section1 {
+  background-image: url(../hero-bg.jpg);
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-transform: uppercase;
+  font-family: Raleway;
+}
+.section1 div {
+  text-align: center;
+  background-color: rgba(75, 153, 188, 0.5);
+  padding-top: 150px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.section1 h1 {
+  margin: 0;
+  font-size: 3.9em;
+  text-shadow: -0.5px 0.5px 2px rgb(0, 2, 92);
+}
+
+.section1 div p {
+  margin-top: 5px;
+  font-size: 1.2em;
+  margin-bottom: 60px;
+}
+
+.section1 div a {
+  display: inline-block;
+  border: 2px solid white;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  font-size: larger;
+  box-sizing: border-box;
+  transition: all ease-in 0.3s;
+}
+.section1 div a:hover {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: larger;
+
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 
+-----------------------------main: section 1----------------------
+-------------------------------------------------------------------
+*/
+.firstsection {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 70px;
+  vertical-align: top;
+  background: linear-gradient(
+      rgba(255, 253, 255, 0.8),
+      rgba(254, 255, 253, 0.899)
+    ),
+    url(../about-bg.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.firstsection .article1 {
+  width: 40%;
+  display: inline-block;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+
+.firstsection .article1 h2 {
+  font-size: 2em;
+  font-family: "sans open";
+  color: #2f4d5a;
+}
+.firstsection .article1 p {
+  font-family: "sans open";
+}
+
+.firstsection .article1 a {
+  display: inline-block;
+  background-color: #71afcb;
+  padding: 10px 23px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.firstsection .article2 {
+  width: 50%;
+  display: inline-block;
+  padding: 10px 40px;
+}
+
+.display {
+  width: 40%;
+  display: inline-block;
+  margin: 10px;
+}
+.display i {
+  font-size: 2em;
+  color: #71afcb;
+}
+
+.display h3 {
+  font-size: 1.5em;
+  font-family: "sans open";
+  color: black;
+}
+
+.article1,
+.article2 {
+  vertical-align: top;
+}
+
+article div p {
+  font-size: 0.9em;
+  font-family: "sans open";
+  color: grey;
+}
+
+/* 
+-----------------------------main: section 2-----------------
+-------------------------------------------------------------------
+*/
+.secondsection {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 20px 50px 60px 50px;
+}
+
+.secondsection h2,
+.secondsection > p {
+  text-align: center;
+}
+
+.secondsection h2 {
+  color: #2f4d5a;
+  font-size: 30px;
+  font-family: "sans open";
+  margin-bottom: 10px;
+  background-image: url(../section-title-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 0px;
+}
+.secondsection > p {
+  color: #2f4d5a;
+  font-family: "sans open";
+  padding: 15px 55px;
+  box-sizing: border-box;
+}
+
+.secondsection article {
+  border: 3px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 20px;
+  width: 12vw;
+  position: relative;
+}
+
+.secondsection div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+
+.secondsection .flex .idk h4 {
+  font-size: 20px;
+  font-family: "sans open";
+  /* color: black;  */
+  font-weight: bold;
+}
+
+.secondsection .flex .idk i {
+  color: #6fadc9;
+  font-size: 30px;
+}
+
+.secondsection article::before {
+  content: "";
+  position: absolute;
+  /* background-color: #6fadc9; */
+  z-index: -100;
+  top: 100%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  transition: all 0.3s ease-in;
+}
+
+.secondsection article:hover::before {
+  top: 0%;
+  background-color: #8dc6e0;
+  color: white;
+}
+
+.secondsection article:hover,
+.secondsection article:hover i {
+  color: white !important;
+}
+
+.secondsection .flex .idk p {
+  /* color: grey; */
+  font-family: "sans open";
+}
+
+/* 
+-----------------------------main: section 3---------------
+-------------------------------------------------------------------
+*/
+
+.thirdsection {
+  padding: 40px 80px;
+  box-sizing: border-box;
+  background-color: #f4f9fc;
+  width: 100%;
+}
+
+.thirdsection div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
+.thirdsection div article {
+  width: 20%;
+  font-family: "sans open";
+}
+
+.thirdsection div article h3 {
+  color: #2f4d5a;
+  font-size: 45px;
+}
+.thirdsection div article h3 i {
+  color: #6fadc9;
+}
+
+.thirdsection div article span {
+  font-weight: 900;
+}
+
+/* 
+-----------------------------main: section 4--------------
+---------------------------------------------------------------
+*/
+.forthsection {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px;
+  color: white;
+  font-family: "sans open";
+  background: linear-gradient(
+      rgba(23, 126, 200, 0.352),
+      rgba(50, 145, 212, 0.736)
+    ),
+    url(../cta-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.forthsection h3 {
+  font-size: 2.3em;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+.forthsection p {
+  font-size: 1.1em;
+  padding: 10px 60px 0px 60px;
+  margin: 0;
+}
+.forthsection a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  border: 3px solid white;
+  border-radius: 40px;
+  padding: 8px 30px;
+  font-weight: 90;
+  margin-top: 30px;
+  display: inline-block;
+}
+/* 
+-----------------------------main: section 5--------------
+---------------------------------------------------------------
+*/
+.fifthsection {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.fifthsection h3 {
+  padding: 20px;
+  color: #2f4d5a;
+  font-size: 1.9em;
+  font-family: "sans open";
+  text-align: center;
+  background-image: url(../section-title-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+.fifthsection p {
+  text-align: center;
+  font-size: 1em;
+  font-family: "sans open";
+  padding: 0px 90px;
+  box-sizing: border-box;
+}
+
+.fifthsection .as {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  font-family: "sans open";
+  gap: 30px;
+}
+
+.fifthsection .as .border {
+  border: 3px solid transparent;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background-color: #ecf5f9;
+}
+.fifthsection div a {
+  text-decoration: none;
+  color: #2f4d5a;
+  padding: 0px 9px;
+}
+
+.fifthsection .as .border a:hover {
+  color: #6fadc9;
+}
+
+.fifthsection .bigdiv div img {
+  width: 400px;
+}
+.fifthsection .bigdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.fifthsection .bigdiv .images img {
+  padding: 10px;
+}
+
+/* 
+-----------------------------main: section 6--------------
+---------------------------------------------------------------
+*/
+
+.sixthsection {
+  background-color: #ecf5f9;
+  padding: 30px 60px;
+}
+.sixthsection h3 {
+  text-align: center;
+  font-size: 1.9em;
+  padding: 20px;
+  background-image: url(../section-title-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Raleway";
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 0;
+  color: #2f4d5a;
+}
+.sixthsection > p {
+  text-align: center;
+  font-family: "sans open";
+  font-size: 1.2;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0px 30px;
+}
+.sixthsection div #first {
+  border: 2px solid transparent;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 0;
+  box-shadow: 0px 0px 4px lightgrey;
+  border-radius: 5px;
+  font-weight: lighter;
+  font-style: italic;
+  color: #2f4d5a;
+}
+
+.sixthsection .firstperson {
+  position: relative;
+  width: 25%;
+}
+.sixthsection div .firstperson img {
+  width: 110px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.triangle {
+  display: inline-block;
+  border: 20px solid transparent;
+  border-top-color: white;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  right: 150px;
+}
+
+.sixthsection .firstperson h4 {
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-family: "sans open";
+  text-transform: capitalize;
+}
+.sixthsection .firstperson p:first-child {
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-family: "sans open";
+  text-transform: capitalize;
+}
+.sixthsection .firstperson p:last-child {
+  color: grey;
+  font-weight: 100;
+  text-align: center;
+  margin: 1px;
+  text-transform: capitalize;
+}
+
+.sixthsection > div {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.sixthsection .firstperson p i {
+  color: #d5e9f2;
+}
+
+/* 
+-----------------------------main: section 7--------------
+---------------------------------------------------------------
+*/
+.seventhsection {
+  background-color: white;
+}
+.seventhsection .container {
+  padding: 0px 40px 100px 40px;
+}
+.seventhsection .title {
+  font-family: "Raleway";
+  padding: 20px;
+  text-align: center;
+}
+.seventhsection .title p {
+  font-weight: lighter;
+  font-style: normal;
+  font-family: "sans open";
+  padding: 5px 55px;
+  margin: 0px;
+}
+.seventhsection h3 {
+  padding: 25px;
+  background-image: url(../section-title-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.9em;
+  font-family: Raleway;
+  color: #2f4d5a;
+  margin: 0;
+  text-align: center;
+}
+
+.seventhsection .pic img {
+  width: 400px;
+}
+.seventhsection .glassesguy,
+.cutegirl,
+.glassesguy2 {
+  position: relative;
+}
+
+.seventhsection .info {
+  text-align: center;
+  background-color: white;
+  padding: 0px 100px;
+  position: absolute;
+  bottom: -25px;
+  left: 27px;
+  box-shadow: 0px 2px 6px 0px lightgrey;
+  text-transform: capitalize;
+  font-family: "Raleway";
+}
+
+/* I have a problem here , I can feel it  */
+
+.seventhsection .info h4 {
+  margin: 0px;
+  padding: 12px 6px 6px 6px;
+  color: #2f4d5a;
+}
+.seventhsection .info h4::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 30%;
+  border-bottom: 1px solid var(--bg--color);
+  padding: 5px;
+  margin: auto;
+}
+.seventhsection .info p {
+  font-style: italic;
+  font-size: 1em;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-weight: 100px;
+  font-family: "open sans";
+  color: #2f4d5a;
+}
+
+.seventhsection .people {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* 
+-----------------------------main: section 8----------------------
+-------------------------------------------------------------------
+*/
+
+.eighthsection {
+  width: 100%;
+  background-color: #f4f9fc;
+  /* margin-bottom: 30px; */
+}
+
+.eighthsection .container {
+  padding: 30px 100px;
+  vertical-align: bottom;
+}
+
+.eighthsection .title {
+  text-align: center;
+  margin: 0px;
+}
+.eighthsection .title h3 {
+  text-align: center;
+  padding: 20px;
+  font-family: "Raleway";
+  font-size: 2.2em;
+  color: #2f4d5a;
+  text-transform: capitalize;
+  background-image: url(../section-title-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+.eighthsection .title > p {
+  font-weight: lighter;
+  font-family: "sans open";
+}
+
+.eighthsection .AEC .adress {
+  width: 40%;
+}
+.eighthsection .AEC .email,
+.phone {
+  width: 20%;
+}
+.eighthsection .AEC {
+  padding: 20px 5px 30px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.eighthsection .adress,
+.email,
+.phone {
+  padding: 25px 35px;
+  background-color: white;
+  box-shadow: 1px 1px 40px 2px lightgray;
+  text-align: center;
+}
+.eighthsection .AEC i {
+  color: #71afcb;
+  font-size: 25px;
+}
+
+.eighthsection .AEC h3 {
+  font-size: 1.4em;
+  text-transform: capitalize;
+  font-family: "Raleway";
+  color: grey;
+  margin: 15px;
+  text-align: center;
+}
+.eighthsection .AEC p {
+  font-family: "sans open";
+  margin: 10px;
+}
+.eighthsection .mapnform {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.eighthsection .map,
+.form {
+  width: 50%;
+}
+.eighthsection .form {
+  background-color: white;
+}
+.eighthsection form {
+  padding: 30px;
+}
+
+.eighthsection #name,
+#email {
+  width: 16vw;
+  height: 7vh;
+  margin-right: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgb(168, 168, 168);
+}
+.eighthsection .plswork {
+  justify-content: space-evenly;
+}
+.eighthsection form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.eighthsection .subject #about {
+  width: 34.5vw;
+  height: 6vh;
+  border: 1px solid rgb(168, 168, 168);
+}
+
+.eighthsection .button {
+  display: block;
+  margin: auto;
+}
+.eighthsection button {
+  background-color: #6fadc9;
+  padding: 15px 35px;
+  border: none;
+  color: white;
+  font-family: "sans open";
+  text-transform: capitalize;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.eighthsection button:hover {
+  background-color: #59b6e2;
+  padding: 15px 35px;
+  border: none;
+  color: white;
+  font-family: "sans open";
+  text-transform: capitalize;
+  font-size: 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.eighthsection #name:focus,
+#email:focus,
+#about:focus,
+textarea:focus {
+  outline: 1px solid rgb(105, 212, 248);
+}
+
+.eighthsection :placeholder-shown {
+  font-size: small;
+  font-family: "sans open";
+  text-transform: capitalize;
+}
+/* 
+-----------------------------finally footer----------------------
+-------------------------------------------------------------------
+*/
+footer {
+  height: 59vh;
+  background-color: #2f4d5a;
+  position: relative;
+  /* box-sizing: border-box; */
+}
+
+footer address h3 {
+  margin: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+address {
+  background-color: white;
+  text-align: center;
+  width: 25vw;
+  /* height:40vh ; */
+  position: absolute;
+  top: -25px;
+  left: 100px;
+  padding: 40px 15px;
+  box-sizing: border-box;
+  border-top: 5px solid var(--bg--color);
+  /* font-style: normal; */
+  font-weight: lighter;
+}
+
+footer address h3 {
+  font-family: "Raleway";
+  color: #2f4d5a;
+  font-style: normal;
+  font-size: x-large;
+}
+
+footer address p {
+  font-family: "sans open";
+  font-size: 0.9em;
+  font-weight: lighter;
+  margin: 0;
+}
+footer address p:first-child {
+  font-style: italic;
+}
+footer address .p2 {
+  padding: 10px;
+  margin-top: 10px;
+  font-style: normal;
+}
+footer address .p3 {
+  padding: 10px;
+  font-style: normal;
+}
+footer address .p2 p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer address .p3 p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer address span {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-style: normal;
+}
+
+footer .LSN {
+  display: flex;
+  flex-wrap: nowrap;
+  /* width: 100%; */
+  justify-content: right;
+}
+
+footer ul {
+  padding: 0px;
+}
+footer .links,
+.services,
+.news {
+  padding: 30px;
+  margin-right: 5px;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+footer .news {
+  width: 35vw;
+}
+footer .links {
+  margin-left: 20px;
+}
+footer .services {
+  margin-left: 30px;
+}
+footer .news {
+  margin-left: 20px;
+}
+footer .links li,
+.services li {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 15px;
+}
+
+footer .links a,
+.services a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: "sans open";
+  text-transform: capitalize;
+  text-align: left;
+}
+
+footer .links h3,
+.services h3,
+.news h3 {
+  font-family: "Raleway";
+  font-size: 1em;
+  font-weight: lighter;
+  color: white;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+footer a,
+h3 {
+  vertical-align: top;
+  text-align: left;
+}
+
+footer i {
+  color: #6fadc9;
+  margin-right: 3px;
+  font-size: 0.7em;
+}
+
+footer .news p {
+  color: white;
+  font-size: 0.9em;
+  font-family: "sans open";
+}
+
+footer input[type="email" i] {
+  width: 20vw;
+  height: 5vh;
+}
+
+footer .flexpls {
+  display: flex;
+  gap: 0;
+  vertical-align: top;
+}
+footer input[type="submit" i] {
+  padding: 10px 25px;
+  background-color: #6fadc9;
+  color: white;
+  border: none;
+  font-family: "sans open";
+  font-size: 0.9em;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+footer input[type="submit" i]:hover {
+  padding: 10px 25px;
+  background-color: #5cb3db;
+  color: white;
+  border: none;
+  font-family: "sans open";
+  font-size: 0.9em;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+footer .lastone p {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-family: "sans open";
+  font-size: 0.9em;
+}
+footer .lastone p:first-child {
+  margin-top: 20px;
+}
+footer .lastone p:last-child {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+footer .lastone::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 90%;
+  border-bottom: 1px solid var(--bg--color);
+  padding: 5px;
+  margin: auto;
+}
+
+footer #buttonthing {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 40px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #64a7c5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0px 0px 5px gray;
+}
+
+footer #buttonthing i {
+  color: white;
+  font-size: 1em;
+}
