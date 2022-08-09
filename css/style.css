@@ -18,6 +18,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+header  , footer , #aboutus , #services , #counts , #action , #portfolio , #team , #contact , #testi {
+  
+  box-sizing: border-box;
+}
+
 /* 
 ---------------------------------HEADER----------------------------------------
 --------------------------------------------------------------------------------
@@ -83,7 +89,8 @@ nav {
   background-color: var(--primary--color);
   box-shadow: 0px 8px 16px rgb(160, 160, 160);
   padding: 10px;
-  left: 20;
+  left: 5px;
+  top: calc(100% + 12px);
   transition: top 2s;
 }
 
@@ -100,6 +107,14 @@ nav {
 .dropdown:hover .dropdowncontent {
   display: block;
 }
+
+.dropdown:hover > a{
+  color: rgb(77, 75, 75);
+  border: 3px solid transparent;
+  padding: 10px 10px;
+  background-color: #6fadc9;
+}
+
 
 /* 
 -----------------------------banner----------------------
@@ -126,6 +141,8 @@ nav {
   width: 100%;
   height: 100%;
 }
+
+
 .section1 h1 {
   margin: 0;
   font-size: 3.9em;
@@ -166,17 +183,16 @@ nav {
 -------------------------------------------------------------------
 */
 .firstsection {
-  display: inline-block;
+  display: block;
   width: 100%;
+  margin: auto;
   padding: 20px 70px;
-  vertical-align: top;
   background: linear-gradient(
       rgba(255, 253, 255, 0.8),
       rgba(254, 255, 253, 0.899)
     ),
     url(../about-bg.jpg);
   background-size: cover;
-  box-sizing: border-box;
 }
 
 .firstsection .article1 {
@@ -242,8 +258,7 @@ article div p {
 -------------------------------------------------------------------
 */
 .secondsection {
-  width: 100vw;
-  box-sizing: border-box;
+  width: 100%;
   padding: 20px 50px 60px 50px;
 }
 
@@ -300,17 +315,18 @@ article div p {
 .secondsection article::before {
   content: "";
   position: absolute;
+  display: block;
   /* background-color: #6fadc9; */
   z-index: -100;
-  top: 100%;
-  bottom: 0%;
+  top: 0%;
+  bottom: 100%;
   right: 0%;
   left: 0%;
   transition: all 0.3s ease-in;
 }
 
 .secondsection article:hover::before {
-  top: 0%;
+  bottom: 0%;
   background-color: #8dc6e0;
   color: white;
 }
@@ -332,7 +348,6 @@ article div p {
 
 .thirdsection {
   padding: 40px 80px;
-  box-sizing: border-box;
   background-color: #f4f9fc;
   width: 100%;
 }
@@ -368,7 +383,6 @@ article div p {
 .forthsection {
   width: 100%;
   text-align: center;
-  box-sizing: border-box;
   padding: 60px;
   color: white;
   font-family: "sans open";
@@ -376,8 +390,7 @@ article div p {
       rgba(23, 126, 200, 0.352),
       rgba(50, 145, 212, 0.736)
     ),
-    url(../cta-bg.jpg);
-  background-position: center;
+    url(../cta-bg.jpg) fixed center;
   background-size: cover;
 }
 .forthsection h3 {
@@ -411,7 +424,6 @@ article div p {
 .fifthsection {
   width: 100%;
   padding: 40px;
-  box-sizing: border-box;
 }
 .fifthsection h3 {
   padding: 20px;
@@ -575,12 +587,13 @@ article div p {
   background-color: white;
 }
 .seventhsection .container {
-  padding: 0px 40px 100px 40px;
+  padding: 0px 100px 100px 100px;
 }
 .seventhsection .title {
   font-family: "Raleway";
   padding: 20px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .seventhsection .title p {
   font-weight: lighter;
@@ -601,59 +614,76 @@ article div p {
   text-align: center;
 }
 
-.seventhsection .pic img {
+.seventhsection img {
   width: 400px;
 }
-.seventhsection .glassesguy,
-.cutegirl,
-.glassesguy2 {
+
+.seventhsection .people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.seventhsection .team {
   position: relative;
 }
 
-.seventhsection .info {
-  text-align: center;
-  background-color: white;
-  padding: 0px 100px;
-  position: absolute;
-  bottom: -25px;
-  left: 27px;
-  box-shadow: 0px 2px 6px 0px lightgrey;
-  text-transform: capitalize;
+.seventhsection .info h4,
+p {
+  margin: 0px;
+}
+.seventhsection .info h4 {
+  margin-top: 5px;
+  margin-bottom: 7px;
   font-family: "Raleway";
+  text-transform: capitalize;
+  font-size: 1em;
+  color: #2f4d5a;
+}
+.seventhsection .info p {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-family: "sans open";
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 0.8em;
+  color: #2f4d5a;
+}
+.seventhsection .info {
+  position: absolute;
+  background-color: white;
+  width: 80%;
+  /* height: 75px; */
+  /* margin: auto; */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  top: 340px;
+  left: 38px;
+  box-shadow: 0px 1px 10px lightgray;
+  max-height: 95px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
 
-/* I have a problem here , I can feel it  */
-
-.seventhsection .info h4 {
-  margin: 0px;
-  padding: 12px 6px 6px 6px;
-  color: #2f4d5a;
+.team:hover .info {
+  max-height: 150px;
+}
+.socials i {
+  margin-top: 10px;
+  color: var(--bg--color);
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 .seventhsection .info h4::after {
   content: "";
   display: block;
   position: relative;
-  width: 30%;
-  border-bottom: 1px solid var(--bg--color);
-  padding: 5px;
   margin: auto;
-}
-.seventhsection .info p {
-  font-style: italic;
-  font-size: 1em;
-  margin-top: 3px;
-  margin-bottom: 10px;
-  font-weight: 100px;
-  font-family: "open sans";
-  color: #2f4d5a;
-}
-
-.seventhsection .people {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 25px;
-  width: 100%;
+  border-bottom: 1px solid var(--bg--color);
+  width: 15%;
+  padding: 5px;
 }
 
 /* 
@@ -668,8 +698,10 @@ article div p {
 }
 
 .eighthsection .container {
-  padding: 30px 100px;
-  vertical-align: bottom;
+  padding: 30px 100px 90px 110px;
+  /* vertical-align: bottom; */
+  transition: move-to-top 1.3s ease-in;
+
 }
 
 .eighthsection .title {
@@ -701,7 +733,7 @@ article div p {
   width: 20%;
 }
 .eighthsection .AEC {
-  padding: 20px 5px 30px 5px;
+  padding: 30px 5px 30px 5px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -733,307 +765,302 @@ article div p {
   font-family: "sans open";
   margin: 10px;
 }
-.eighthsection .mapnform {
-  width: 100%;
+.mapnform {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+   width: 100%;
+  gap: 20px;
+}
+.map .form {
+  width: 40%;
+}
+.form {
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 1px 0px 5px lightgray;
 }
 
-.eighthsection .map,
-.form {
+.same {
+  padding: 15px;
+  font-size: 1.1em;
+  width: 100%;
+  border: none;
+  outline: 1px solid lightgray;
+  margin: 10px 0px;
+  
+}
+.same:focus{
+  outline-color:var(--bg--color) ;
+}
+.plswork {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+#name , #email {
   width: 50%;
 }
-.eighthsection .form {
-  background-color: white;
-}
-.eighthsection form {
-  padding: 30px;
-}
 
-.eighthsection #name,
-#email {
-  width: 16vw;
-  height: 7vh;
-  margin-right: 40px;
-  box-sizing: border-box;
-  border: 1px solid rgb(168, 168, 168);
-}
-.eighthsection .plswork {
-  justify-content: space-evenly;
-}
-.eighthsection form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: space-between;
-}
-
-.eighthsection .subject #about {
-  width: 34.5vw;
-  height: 6vh;
-  border: 1px solid rgb(168, 168, 168);
-}
-
-.eighthsection .button {
-  display: block;
-  margin: auto;
-}
 .eighthsection button {
-  background-color: #6fadc9;
-  padding: 15px 35px;
-  border: none;
-  color: white;
-  font-family: "sans open";
-  text-transform: capitalize;
-  font-size: 1em;
-  box-sizing: border-box;
-}
-.eighthsection button:hover {
-  background-color: #59b6e2;
-  padding: 15px 35px;
-  border: none;
-  color: white;
-  font-family: "sans open";
-  text-transform: capitalize;
-  font-size: 1em;
-  box-sizing: border-box;
+  display: block;
   cursor: pointer;
-}
-.eighthsection #name:focus,
-#email:focus,
-#about:focus,
-textarea:focus {
-  outline: 1px solid rgb(105, 212, 248);
+  padding: 15px 25px;
+  background-color: var(--bg--color);
+  color: white;
+  margin: auto;
+  border: none;
+  font-size: 1em;
+  transition: opacity 0.3s ease; }
+
+  button:hover , button:focus{
+  opacity: 0.8;
 }
 
-.eighthsection :placeholder-shown {
-  font-size: small;
-  font-family: "sans open";
-  text-transform: capitalize;
+.eighthsection .people {
+  position: relative;
 }
+
+#team1 {
+  animation: move-to-top 0.5s ease-in;
+}
+#team2 {
+  animation: move-to-top 0.9s ease-in;
+}
+#team3{
+  animation: move-to-top 1.2s ease-in;
+}
+
 /* 
 -----------------------------finally footer----------------------
 -------------------------------------------------------------------
 */
-footer {
-  height: 59vh;
+footer{
   background-color: #2f4d5a;
-  position: relative;
-  /* box-sizing: border-box; */
+   height: 65vh;  
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   
 }
 
-footer address h3 {
+
+
+address > h3 {
   margin: 0px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-address {
-  background-color: white;
-  text-align: center;
-  width: 25vw;
-  /* height:40vh ; */
-  position: absolute;
-  top: -25px;
-  left: 100px;
-  padding: 40px 15px;
-  box-sizing: border-box;
-  border-top: 5px solid var(--bg--color);
-  /* font-style: normal; */
-  font-weight: lighter;
 }
 
-footer address h3 {
-  font-family: "Raleway";
-  color: #2f4d5a;
-  font-style: normal;
-  font-size: x-large;
-}
 
-footer address p {
-  font-family: "sans open";
-  font-size: 0.9em;
-  font-weight: lighter;
-  margin: 0;
-}
-footer address p:first-child {
-  font-style: italic;
-}
-footer address .p2 {
-  padding: 10px;
-  margin-top: 10px;
-  font-style: normal;
-}
-footer address .p3 {
-  padding: 10px;
-  font-style: normal;
-}
-footer address .p2 p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-footer address .p3 p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+footer .container {
 
-footer address span {
-  font-weight: bold;
-  text-transform: capitalize;
-  font-style: normal;
-}
-
-footer .LSN {
   display: flex;
   flex-wrap: nowrap;
-  /* width: 100%; */
-  justify-content: right;
+  justify-content: space-evenly;
+  gap: 15px;
+ padding: 10px 30px;
+ margin-bottom: 40px;
 }
 
-footer ul {
-  padding: 0px;
+
+
+
+.absoforad{
+  position: relative;
 }
-footer .links,
-.services,
-.news {
-  padding: 30px;
-  margin-right: 5px;
-  margin-top: 25px;
+ address {
+ position: absolute; 
+  background-color: white;
+  width: 25vw;
+  height: 45vh;
+  padding: 20px;
   box-sizing: border-box;
+  top: -40px;
+  left: -35px;
+border-top: 5px solid var(--bg--color);
+text-align: center;
+overflow: hidden;
+
 }
 
-footer .news {
-  width: 35vw;
-}
-footer .links {
-  margin-left: 20px;
-}
-footer .services {
-  margin-left: 30px;
-}
-footer .news {
-  margin-left: 20px;
-}
-footer .links li,
-.services li {
-  text-decoration: none;
-  list-style: none;
-  margin-top: 15px;
+address h3 {
+padding-bottom: 30px; 
+font-size: 1.5em;
+color: #2f4d5a;
+font-family:"Raleway" ;
+font-weight: 400;
+font-style: normal;
 }
 
-footer .links a,
-.services a {
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-  font-family: "sans open";
-  text-transform: capitalize;
-  text-align: left;
+address .p1, .p2 , .p3 {
+padding-bottom:30px ;
+font-size: 0.9em;
+font-family: "sans open";
+font-weight: lighter;
+color: #2f4d5a;
 }
 
-footer .links h3,
-.services h3,
-.news h3 {
+address .p4 {
+  padding-bottom: 25px; }
+.p4 i { 
+  font-size: 1.5em;
+  color: #2f4d5a;
+}
+
+address .p2, .p3 {
+  font-style: normal;
+}
+
+ .p3 span{
   font-family: "Raleway";
-  font-size: 1em;
-  font-weight: lighter;
-  color: white;
-  text-transform: capitalize;
-  text-align: left;
+font-weight: bolder;
+text-transform: capitalize;
+font-size: 1em;
+ }
+.links , .services {
+  width: 20%;
 }
-
-footer a,
-h3 {
-  vertical-align: top;
-  text-align: left;
+.news {
+  width: 30%;
 }
-
-footer i {
-  color: #6fadc9;
-  margin-right: 3px;
-  font-size: 0.7em;
-}
-
-footer .news p {
-  color: white;
-  font-size: 0.9em;
-  font-family: "sans open";
-}
-
-footer input[type="email" i] {
-  width: 20vw;
-  height: 5vh;
-}
-
-footer .flexpls {
+ .LSN {
   display: flex;
-  gap: 0;
-  vertical-align: top;
+width: 80%;
+justify-content: right;
+ }
+
+ .LSN li {
+  list-style: none;
+ }
+ .LSN ul {
+  padding-left: 0px;
+ }
+ .LSN a {
+  display: inline-block;
+  color: white;
+  font-weight: lighter;
+  font-family: "sans open";
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 0px;
 }
-footer input[type="submit" i] {
-  padding: 10px 25px;
+
+.LSN h3 {
+  color: white;
+  text-transform:capitalize ;
+  font-family: "Raleway";
+font-weight: lighter;
+
+}
+
+.LSN i {
+  color: #8dc6e0;
+  font-size: 0.8em;
+}
+
+.news p {
+  color: white;
+  padding:10px 0px 20px 0px;
+  font-family: "sans open";
+  font-weight: 100;
+  font-size: 0.9em;
+}
+
+.flexpls {
+  display: flex;
+
+}
+
+#mail {
+  padding: 10px 40px;
+  border: none;
+}
+
+.flexpls> button {
   background-color: #6fadc9;
+  padding: 15px 20px;
   color: white;
+  font-size: 1em;
   border: none;
-  font-family: "sans open";
-  font-size: 0.9em;
-  box-sizing: border-box;
-  text-transform: capitalize;
-}
-footer input[type="submit" i]:hover {
-  padding: 10px 25px;
-  background-color: #5cb3db;
-  color: white;
-  border: none;
-  font-family: "sans open";
-  font-size: 0.9em;
-  box-sizing: border-box;
-  text-transform: capitalize;
   cursor: pointer;
 }
 
-footer .lastone p {
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-  color: white;
-  font-family: "sans open";
-  font-size: 0.9em;
-}
-footer .lastone p:first-child {
-  margin-top: 20px;
-}
-footer .lastone p:last-child {
-  margin-top: 10px;
-  margin-bottom: 25px;
-}
-footer .lastone::before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 90%;
-  border-bottom: 1px solid var(--bg--color);
-  padding: 5px;
-  margin: auto;
+.flexpls > button:hover{
+cursor: pointer;
+background-color: #6fadc9;
 }
 
-footer #buttonthing {
+
+footer .lastone {
+  margin: auto;
+  text-align: center;
+  color: white;
+font-family: "sans open";
+padding: 10px;
+position: relative;
+}
+
+footer .lastone::before{
+  content: "";
+  position: relative;
+  display: block;
+  right: 250px;
+  border-top: 1px solid var(--bg--color);
+  width: 250%;
+  padding-top: 20px; ;
+
+}
+.lastone span {
+  font-weight: bolder;
+}
+.lastone #boots {
+  padding-top: 7px;
+  size: 0.7em;
+}
+
+.lastone #boots span {
+  font-weight: normal;
+  color: var(--bg--color);
+}
+#buttonthing {
   position: fixed;
-  bottom: 20px;
-  right: 10px;
-  width: 40px;
-  height: 41px;
+  right: 5px;
+  bottom: 10px;
+  border: 1px solid var(--bg--color);
+  background-color: #6fadc9;
   border-radius: 50%;
-  background-color: #64a7c5;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0px 0px 5px gray;
-}
-
-footer #buttonthing i {
   color: white;
-  font-size: 1em;
+  box-shadow: 1px 1px 5px lightgray;
 }
+/* 
+-----------------------------Animations ----------------------------------------
+--------------------------------------------------------------------------------
+*/
+@keyframes move-to-top {
+  from{
+    top: 100px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+  
+}
+/* 
+@keyframes bottomtotop {
+  from{
+    top: 100px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 0;
+  }
+} */
