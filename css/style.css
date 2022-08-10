@@ -19,8 +19,16 @@ body {
   padding: 0;
 }
 
-header  , footer , #aboutus , #services , #counts , #action , #portfolio , #team , #contact , #testi {
-  
+header,
+footer,
+#aboutus,
+#services,
+#counts,
+#action,
+#portfolio,
+#team,
+#contact,
+#testi {
   box-sizing: border-box;
 }
 
@@ -108,13 +116,12 @@ nav {
   display: block;
 }
 
-.dropdown:hover > a{
+.dropdown:hover > a {
   color: rgb(77, 75, 75);
   border: 3px solid transparent;
   padding: 10px 10px;
   background-color: #6fadc9;
 }
-
 
 /* 
 -----------------------------banner----------------------
@@ -141,7 +148,6 @@ nav {
   width: 100%;
   height: 100%;
 }
-
 
 .section1 h1 {
   margin: 0;
@@ -701,7 +707,6 @@ p {
   padding: 30px 100px 90px 110px;
   /* vertical-align: bottom; */
   transition: move-to-top 1.3s ease-in;
-
 }
 
 .eighthsection .title {
@@ -769,7 +774,7 @@ p {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-   width: 100%;
+  width: 100%;
   gap: 20px;
 }
 .map .form {
@@ -789,17 +794,17 @@ p {
   border: none;
   outline: 1px solid lightgray;
   margin: 10px 0px;
-  
 }
-.same:focus{
-  outline-color:var(--bg--color) ;
+.same:focus {
+  outline-color: var(--bg--color);
 }
 .plswork {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
 }
-#name , #email {
+#name,
+#email {
   width: 50%;
 }
 
@@ -812,9 +817,11 @@ p {
   margin: auto;
   border: none;
   font-size: 1em;
-  transition: opacity 0.3s ease; }
+  transition: opacity 0.3s ease;
+}
 
-  button:hover , button:focus{
+button:hover,
+button:focus {
   opacity: 0.8;
 }
 
@@ -828,7 +835,7 @@ p {
 #team2 {
   animation: move-to-top 0.9s ease-in;
 }
-#team3{
+#team3 {
   animation: move-to-top 1.2s ease-in;
 }
 
@@ -836,40 +843,32 @@ p {
 -----------------------------finally footer----------------------
 -------------------------------------------------------------------
 */
-footer{
+footer {
   background-color: #2f4d5a;
-   height: 65vh;  
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 address > h3 {
   margin: 0px;
 }
 
-
 footer .container {
-
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   gap: 15px;
- padding: 10px 30px;
- margin-bottom: 40px;
+  padding: 10px 30px;
+  margin-bottom: 40px;
 }
 
-
-
-
-.absoforad{
+.absoforad {
   position: relative;
 }
- address {
- position: absolute; 
+address {
+  position: absolute;
   background-color: white;
   width: 25vw;
   height: 45vh;
@@ -877,65 +876,69 @@ footer .container {
   box-sizing: border-box;
   top: -40px;
   left: -35px;
-border-top: 5px solid var(--bg--color);
-text-align: center;
-overflow: hidden;
-
+  border-top: 5px solid var(--bg--color);
+  text-align: center;
+  overflow: hidden;
 }
 
 address h3 {
-padding-bottom: 30px; 
-font-size: 1.5em;
-color: #2f4d5a;
-font-family:"Raleway" ;
-font-weight: 400;
-font-style: normal;
+  padding-bottom: 30px;
+  font-size: 1.5em;
+  color: #2f4d5a;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
 }
 
-address .p1, .p2 , .p3 {
-padding-bottom:30px ;
-font-size: 0.9em;
-font-family: "sans open";
-font-weight: lighter;
-color: #2f4d5a;
+address .p1,
+.p2,
+.p3 {
+  padding-bottom: 30px;
+  font-size: 0.9em;
+  font-family: "sans open";
+  font-weight: lighter;
+  color: #2f4d5a;
 }
 
 address .p4 {
-  padding-bottom: 25px; }
-.p4 i { 
+  padding-bottom: 25px;
+}
+.p4 i {
   font-size: 1.5em;
   color: #2f4d5a;
 }
 
-address .p2, .p3 {
+address .p2,
+.p3 {
   font-style: normal;
 }
 
- .p3 span{
+.p3 span {
   font-family: "Raleway";
-font-weight: bolder;
-text-transform: capitalize;
-font-size: 1em;
- }
-.links , .services {
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+.links,
+.services {
   width: 20%;
 }
 .news {
   width: 30%;
 }
- .LSN {
+.LSN {
   display: flex;
-width: 80%;
-justify-content: right;
- }
+  width: 80%;
+  justify-content: right;
+}
 
- .LSN li {
+.LSN li {
   list-style: none;
- }
- .LSN ul {
+}
+.LSN ul {
   padding-left: 0px;
- }
- .LSN a {
+}
+.LSN a {
   display: inline-block;
   color: white;
   font-weight: lighter;
@@ -947,10 +950,9 @@ justify-content: right;
 
 .LSN h3 {
   color: white;
-  text-transform:capitalize ;
+  text-transform: capitalize;
   font-family: "Raleway";
-font-weight: lighter;
-
+  font-weight: lighter;
 }
 
 .LSN i {
@@ -960,7 +962,7 @@ font-weight: lighter;
 
 .news p {
   color: white;
-  padding:10px 0px 20px 0px;
+  padding: 10px 0px 20px 0px;
   font-family: "sans open";
   font-weight: 100;
   font-size: 0.9em;
@@ -968,7 +970,6 @@ font-weight: lighter;
 
 .flexpls {
   display: flex;
-
 }
 
 #mail {
@@ -976,7 +977,7 @@ font-weight: lighter;
   border: none;
 }
 
-.flexpls> button {
+.flexpls > button {
   background-color: #6fadc9;
   padding: 15px 20px;
   color: white;
@@ -985,30 +986,28 @@ font-weight: lighter;
   cursor: pointer;
 }
 
-.flexpls > button:hover{
-cursor: pointer;
-background-color: #6fadc9;
+.flexpls > button:hover {
+  cursor: pointer;
+  background-color: #6fadc9;
 }
-
 
 footer .lastone {
   margin: auto;
   text-align: center;
   color: white;
-font-family: "sans open";
-padding: 10px;
-position: relative;
+  font-family: "sans open";
+  padding: 10px;
+  position: relative;
 }
 
-footer .lastone::before{
+footer .lastone::before {
   content: "";
   position: relative;
   display: block;
   right: 250px;
   border-top: 1px solid var(--bg--color);
   width: 250%;
-  padding-top: 20px; ;
-
+  padding-top: 20px;
 }
 .lastone span {
   font-weight: bolder;
@@ -1043,24 +1042,228 @@ footer .lastone::before{
 --------------------------------------------------------------------------------
 */
 @keyframes move-to-top {
-  from{
+  from {
     top: 100px;
     opacity: 0;
   }
-  to{
+  to {
     top: 0;
     opacity: 1;
   }
-  
 }
+
 /* 
-@keyframes bottomtotop {
-  from{
-    top: 100px;
-    opacity: 0;
+---------------------------Media query -----------------------------
+-------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 600px) {
+  header {
+    overflow: auto;
   }
-  to{
-    top: 0;
-    opacity: 0;
-  }
+
+
+  /* 
+-----------Counts--------------
+*/
+
+.thirdsection {
+
+  padding: 40px 20px 30px 30px ;
+}
+.thirdsection div {
+ flex-direction: column;
+ justify-content: space-evenly;
+ box-sizing: border-box;
+}
+
+/* .thirdsection div article {
+  display: block;
+
 } */
+
+.thirdsection div article h3{
+  margin: 30px;
+  display: flex;
+  justify-content: left;
+}
+.thirdsection div article p {
+  width: 100%;
+  margin: 0;
+  font-size: 1.em;
+}
+
+.thirdsection div article {
+width: 100%;
+
+}
+
+/* .thirdsection div article h3 i{
+  display: inline;
+} */
+
+  /* 
+------------Call to action-----------
+*/
+
+  .forthsection {
+    padding: 30px;
+  }
+
+  .forthsection h3 {
+    font-size: 2.5em;
+    font-family: "Raleway";
+    margin-bottom: 5px;
+    padding: 30px 20px 5px 20px;
+  }
+
+  .forthsection p {
+    font-size: 1.4em;
+    padding: 10px;
+    margin: bottom 10px;
+  }
+  .forthsection a {
+    font-size: 1.4em;
+    border: 2px solid white;
+    padding: 10px 30px;
+    margin: 30px 0px;
+  }
+
+
+  /* 
+-------------Portfolio --------------
+*/
+.fifthsection {
+  padding: 20px;
+}
+
+.fifthsection p {
+width: 100%;
+padding: 10px;
+font-size: 1em;
+text-align: center;
+
+}
+
+.fifthsection h3 {
+  padding-top: 30px;
+}
+
+.fifthsection .as .border {
+  padding: 9px 40px;
+}
+
+.fifthsection .bigdiv .images img {
+  padding: 0px;
+}
+
+  /* 
+-------------Team--------------
+*/
+.seventhsection .container {
+
+  padding: 10px 20px 25px 20px;
+}
+
+.seventhsection .title h3 {
+font-size: 2em;
+}
+
+.seventhsection .title p {
+width: 100%;
+font-size: 1em;
+text-align: center;
+padding: 0px;
+font-weight: 400;
+color: #2f4d5a;
+}
+
+.seventhsection {
+ flex-direction: column;
+ margin-bottom: 10px;
+}
+
+.seventhsection .team {
+  margin-bottom: 70px;
+}
+
+  /* 
+-------------contact--------------
+*/
+
+  .eighthsection .container {
+    padding: 30px 10px 100px 10px;
+  }
+
+  .eighthsection .AEC .email,
+  .phone {
+    width: 80%;
+  }
+  .eighthsection .AEC .adress {
+    width: 80%;
+  }
+  .eighthsection .AEC h3 {
+    font-size: 1.3em;
+    margin: 10px;
+    margin-top: 15px;
+  }
+  .eighthsection .title > p {
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0px 15px;
+  }
+
+  .eighthsection .AEC p {
+    font-size: 0.9em;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .eighthsection .AEC {
+    padding: 30px 5px 30px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .mapnform {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+  iframe {
+    width: 100%;
+   margin: 0 auto;
+  }
+  /* something's wrong with my map , I can't change its height 
+  and width */
+  .plswork {
+    display: block;
+    margin: auto;
+  }
+
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+  #name,
+  #email {
+    width: 100%;
+  }
+  .same {
+    padding: 10px 15px;
+    font-size: 1em;
+    width: 100%;
+    border: none;
+    outline: 1px solid lightgray;
+    margin: 10px 0px;
+    box-sizing: border-box;
+  }
+
+  /* 
+------------- footer-----------------
+*/
+}
